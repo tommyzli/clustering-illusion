@@ -9,6 +9,43 @@
     <link rel="stylesheet" href="tufte.css">
   </head>
   <body>
-    <h1>The Clustering Illusion</h1>
+    <article>
+      <h1>The Clustering Illusion</h1>
+      <section>
+        <p>
+          Formally, the clustering illusion is a cognitive bias where seemingly non-random patterns are identified within random distributions.
+        </p>
+        <p>
+          True randomness is an unintuitive concept, and is difficult for humans to reason about. We tend to assume that random selection results in a completely uniform distribution over the sample space, but in reality a random selection can result in <em>any</em> distribution.
+        </p>
+        <p>
+          For example, if you were to flip a coin thirty times, which result set would you expect?
+        </p>
+        <pre class="code">
+A: H T H T H H T H T T
+
+B: H T T T T H H T H H
+        </pre>
+        <p>
+          Most people would agree that the result B just <em>looks</em> less likely. In fact, I completely made up A, while B came from actual coin flips. You would think that seeing tails four times in a row is incredibly unlikely, but these small clusters occur frequently in random distributions.
+        </p>
+        <p>
+          A canonical example of this bias can be seen in the blitz of London during World War II. As German V-1 and V-2 rockets rained on London, maps of the missile strike locations showed certain neighbourhoods receiving much more damage than others<label for="sn-more-damage-than-others" class="margin-toggle sidenote-number"></label>.
+          <span class="sidenote">Gilovich, Thomas. <em>How We Know What Isn't So</em>. The Free Press, 1991, page 20.</span>
+          This led the Brits to two (incorrect) conclusions: that the German rockets were far more precise than they actually were, and that the untouched neighbourhoods housed German spies.
+        </p>
+        <p>
+          Below is a simulation that will place random points throughout the field.
+          <br />
+          How random does it look?
+        </p>
+        <button id="start">Run Simulation</button>
+      </section>
+      <section>
+        <canvas id="clusteringExample" width="700" height="500" style="border: 1px solid black;">
+        </canvas>
+      </section>
+    </article>
+    <script type="text/javascript" src="illusion.js"></script>
   </body>
  </html>
